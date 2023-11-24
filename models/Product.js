@@ -24,6 +24,9 @@ class Product extends Model {
         image: {
           type: DataTypes.JSON,
         },
+        highlight: {
+          type: DataTypes.BOOLEAN,
+        },
       },
       {
         sequelize,
