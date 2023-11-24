@@ -22,7 +22,7 @@ class Product extends Model {
           type: DataTypes.INTEGER,
         },
         image: {
-          type: DataTypes.STRING,
+          type: DataTypes.JSON,
         },
       },
       {

@@ -10,10 +10,7 @@ class Order extends Model {
           autoIncrement: true,
         },
         products: {
-          type: DataTypes.STRING,
-        },
-        quantity: {
-          type: DataTypes.STRING,
+          type: DataTypes.JSON,
         },
         state: {
           type: DataTypes.ENUM ("in process", "sending", "delivered"),
