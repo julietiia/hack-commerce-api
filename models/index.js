@@ -12,21 +12,30 @@ const sequelize = new Sequelize(
 );
 
 const User = require("./User");
-const Comment = require("./Comment");
-const Article = require("./Article");
+const Admin = require("./Admin");
+const Category = require("./Category");
+const Order = require("./Order");
+const Product = require("./Product");
 
 User.initModel(sequelize);
-Comment.initModel(sequelize);
-Article.initModel(sequelize);
+Admin.initModel(sequelize);
+Category.initModel(sequelize);
+Order.initModel(sequelize);
+Product.initModel(sequelize);
 
-/**
- * Luego de definir los modelos, se pueden establecer relaciones entre los
- * mismos (usando métodos como belongsTo, hasMany y belongsToMany)...
- */
+User.hasMany(Order);
+Order.belongsTo(User);
+
+Category.hasMany(Product);
+Product.belongsTo(Category);
+
+
 
 module.exports = {
   sequelize,
   User,
-  Comment,
-  Article,
+  Admin,
+  Category,
+  Order,
+  Product,
 };
