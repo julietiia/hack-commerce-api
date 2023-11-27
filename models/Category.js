@@ -18,6 +18,9 @@ class Category extends Model {
         images: {
           type: DataTypes.STRING,
         },
+        code: {
+          type: DataTypes.INTEGER,
+        },
       },
       {
         sequelize,

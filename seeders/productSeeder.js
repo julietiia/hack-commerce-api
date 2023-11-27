@@ -9,6 +9,10 @@ module.exports = async () => {
     stock: "10",
     image: "https://images.urbndata.com/is/image/UrbanOutfitters/85791887_040_d?$redesign-zoom-5x$",
     highlight: false, 
+    code: 10,
+   
+
+    
   },
   {
     name: "Panton Chair",
@@ -17,6 +21,8 @@ module.exports = async () => {
     stock: "20",
     image: "https://www.urbanoutfitters.com/shop/lennon-chair?category=floor-pillows-cushions&color=111&type=REGULAR&size=ONE%20SIZE&quantity=1",
     highlight: true,
+    code: 10,
+    
   },
   {
     name: "Felix Chair",
@@ -25,6 +31,8 @@ module.exports = async () => {
     stock: "16",
     image: "https://images.urbndata.com/is/image/UrbanOutfitters/82877119_034_b?$redesign-zoom-5x$",
     highlight: false,
+    code:10,
+
   },
   {
     name: "Benji Chair",
@@ -33,7 +41,12 @@ module.exports = async () => {
     stock: "40",
     image: "https://images.urbndata.com/is/image/UrbanOutfitters/82995226_011_b?$redesign-zoom-5x$",
     highlight: true,
+    code: 10,
+   
   },
+  {
+
+  }
   
 ];
 

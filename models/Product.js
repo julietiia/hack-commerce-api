@@ -27,6 +27,7 @@ class Product extends Model {
         highlight: {
           type: DataTypes.BOOLEAN,
         },
+       
       },
       {
         sequelize,
