@@ -45,8 +45,19 @@ module.exports = async () => {
    
   },
   {
+<<<<<<< Updated upstream
 
   }
+=======
+    name: "Benji Sofa",
+    price: "600",
+    description: "Elevate your reading nooks with this chair featuring a scalloped back rest for a fresh twist on seating essentials. Cushy lounge chair finished with luxuriously plush fabrics. This custom piece of furniture will be made to order just for you. Available exclusively at Urban Outfitters. Dimensions: 35l x 33w x 31h",
+    stock: "40",
+    image: "https://images.urbndata.com/is/image/UrbanOutfitters/82995226_011_b?$redesign-zoom-5x$",
+    highlight: true,
+    
+  },
+>>>>>>> Stashed changes
   
 ];
 
