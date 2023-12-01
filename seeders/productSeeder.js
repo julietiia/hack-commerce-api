@@ -40,7 +40,7 @@ module.exports = async () => {
         "Instantly upgrade your reading nook and living spaces with this cozy-meets-modern arm chair. Its integrated seat cushion offers a clean finish with a seat back that wraps around to its armrests at the sides. Features a layered upholstered base that lends a timeless, cloud-like look to your space. Composition and care: Polyester, poplar wood, plywood and spot clean .Dimensions: 35l x 33w x 31h",
       stock: "47",
       image:
-        ["felix_chair_d.webp", "felix_chair_e.webp"],
+        ["felix_chair_b.webp", "felix_chair_e.webp"],
       highlight: true,
     },
     {
