@@ -30,7 +30,7 @@ module.exports = async () => {
         "Refresh your seating spaces with this legless chair upholstered allover in sleek, brown-finished faux leather. Curving silhouette features cushy pintucked cushions filled with foam. Contemporary and cozy styling is perfect for snuggling into with your current read!  Composition and care: Foam, eucalyptus, polyurethane and spot clean .Dimensions: 35l x 33w x 31h",
       stock: "67",
       image:
-        ["greta_chair_b.webp", "greta_chair_b.webp"],
+        ["greta_chair_d.webp", "greta_chair_e.webp"],
       highlight: true,
     },
     {
