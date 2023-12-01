@@ -118,13 +118,13 @@ module.exports = async () => {
       highlight: false,
     },
     {
-      name: "Yoji Love Seat",
+      name: "Yoji Sofa",
       price: "999",
       description:
         "Inviting upholstered love seat that captures an approachable, modern look with curving lines all over and a wooden block base. Padded construction is topped with a single seat cushion that’s equal parts chic and comfy. Two people recommended for assembly. Contemporary design features a cushioned seat and backrest. Pair this cozy sofa with other pieces from our Corium seating collection to create a sectional-style sofa fit for your space. This custom piece of furniture will be made to order just for you. Composition and care: Polyester, plywood, pine wood, rubberwood, fabric and spot clean.Dimensions: 35l x 33w x 31h",
       stock: "40",
       image:
-        ["corium_sofa_b.webp", "corium_sofa_b.webp",],
+        ["yoji_sofa_b.webp", "yoji_sofa_d.webp",],
       highlight: false,
     },
     {
@@ -196,7 +196,7 @@ module.exports = async () => {
         "Elevated essential coffee table crafted from powder-coated iron in statement finishes. Its classic silhouette features an ovular tabletop set on tubular legs with curving edges for a soft touch. Composition and care: Metal and wipe clean. Dimensions: 35l x 33w x 31h",
       stock: "40",
       image:
-        ["kane_table_b.webp", "kane_table_e.webp",],
+        ["kane_table_d.webp", "kane_table_f.webp",],
       highlight: false,
     },
     {
@@ -237,16 +237,6 @@ module.exports = async () => {
       stock: "30",
       image:
         ["silas_dining_table_b.webp", "silas_dining_table_e.webp",],
-      highlight: false,
-    },
-    {
-      name: "Ryan Coffee Table",
-      price: "149",
-      description:
-        "Refresh your living space with this metal coffee table with removable wheels. With eye-catching powder-coated finishes, this table features a square tabletop with sleek and structural legs. Option to set on wheels so you can move it wherever you need additional surface area. With simple construction that offers a timeless piece to your home collection that can move with you as your spaces and styles evolve.  Composition and care: Metal and wipe clean. Dimensions: 35l x 33w x 31h",
-      stock: "30",
-      image:
-        ["ryan_coffee_table_b.webp", "ryan_coffee_table_e.webp",],
       highlight: false,
     },
     {
@@ -390,7 +380,7 @@ module.exports = async () => {
         "Create a contemporary light display in your space with this floor lamp. Crafted from iron, this floor lamp features a dome-shaped shade with an angular base that lends a fresh spin to your lighting essentials. Composition and care: 95% Iron, 5% other and wipe clean. Dimensions: 35l x 33w x 31h",
       stock: "22",
       image:
-        ["wiatt_floor_lamp_b.webp", "wiatt_floor_lamp_e.webp",],
+        ["wiatt_floor_lamp_d.webp", "wiatt_floor_lamp_e.webp",],
       highlight: false,
     },
     {
@@ -430,7 +420,7 @@ module.exports = async () => {
         "Refresh your lighting with this groovy floor lamp. Crafted from iron with an oversized dome-shaped shade, this floor lamp features a wiggly base for a playfully modern look we love. Plugs in to power on.  Composition and care: Iron and wipe clean. Dimensions: 35l x 33w x 31h",
       stock: "14",
       image:
-        ["alora_floor_lamp_b.webp", "alora_floor_lamp_d.webp",],
+        ["alora_floor_lamp_b.webp", "alora_floor_lamp_e.webp",],
       highlight: false,
     },
     
@@ -442,17 +432,7 @@ module.exports = async () => {
         "Make your space bloom with this 2-in-1 taper candle and incense holder by Areaware. Made using concrete and painted in vibrant hues, this heavyweight floral-shaped candle and incense holder infuses your space with a playful pop of whimsy. Perfect for dressing up your shelf displays and accent tables, turn the bud side up to burn your stick incense or bloom side up to burn your fave taper candle.  Composition and care: Cement, paint, stainless steel plate, brass sleeve and wipe clean. Dimensions: 35l x 33w x 31h",
       stock: "200",
       image:
-        ["areaware_Candle_holder_b.webp", "areaware_Candle_holder_f.webp",],
-      highlight: false,
-    },
-    {
-      name: "Areaware Poppy Taper Candle & Incense Holder",
-      price: "189",
-      description:
-        "The perfect addition to your minimalist haven, this checkerboard tufted rug brings a cozy feel to any space. Made with tufted cotton that’s so cushy to the touch. Composition and care: 100% Cotton and spot clean. Dimensions: 35l x 33w x 31h",
-      stock: "200",
-      image:
-        ["checkerboard_rug_b.webp", "checkerboard_rug_f.webp",],
+        ["areaware_candle_holder_b.webp", "areaware_candle_holder_f.webp",],
       highlight: false,
     },
     {
@@ -505,6 +485,28 @@ module.exports = async () => {
         ["nala_multihook_b.webp", "nala_multihook_e.webp",],
       highlight: false,
     },
+    {
+      name: "Checkerboard Hilo Minimal Tufted Rug",
+      price: "189",
+      description:
+        "No-slip, polyester rug pad coated with high-grade, natural rubber derived from renewable resources. The tight-weave construction allows for air flow to make vacuuming easier. Composition and care: Polyester, rubber and wipe clean. Dimensions: 35l x 33w x 31h",
+      stock: "90",
+      image:
+        ["checkerboard_rug_b.webp", "checkerboard_rug_f.webp",],
+      highlight: false,
+    },
+    {
+      name: "Moodcast Candle",
+      price: "28",
+      description:
+        "Fill your space with the entrancing fragrances of this candle by Moodcast. Made from a coconut wax blend infused with a range of scent notes. Housed in an iridescent glass vessel. Composition and care: Coconut wax blend. Dimensions: 35l x 33w x 31h",
+      stock: "200",
+      image:
+        ["moodcastcandle_b.webp", "moodcastcandle_d.webp",],
+      highlight: false,
+    },
+
+
 
 
 
