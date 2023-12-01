@@ -13,7 +13,7 @@ class Product extends Model {
           type: DataTypes.STRING,
         },
         price: {
-          type: DataTypes.INTEGER,
+          type: DataTypes.DECIMAL,
         },
         description: {
           type: DataTypes.TEXT,
