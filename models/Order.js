@@ -13,8 +13,8 @@ class Order extends Model {
           type: DataTypes.JSON,
         },
         state: {
-          type: DataTypes.ENUM ("in process", "sending", "delivered"),
-          defaultValue: "in process",
+          type: DataTypes.ENUM ("confirmed", "shipped", "delivered", "cancelled"),
+          defaultValue: "confirmed",
         },
         date: {
           type: DataTypes.DATE,
