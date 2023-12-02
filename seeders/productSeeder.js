@@ -273,17 +273,6 @@ module.exports = async () => {
       highlight: false,
       categoryId: 4
     },
-    {
-      name: "Ryan Coffee Table",
-      price: "149",
-      description:
-        "Refresh your living space with this metal coffee table with removable wheels. With eye-catching powder-coated finishes, this table features a square tabletop with sleek and structural legs. Option to set on wheels so you can move it wherever you need additional surface area. With simple construction that offers a timeless piece to your home collection that can move with you as your spaces and styles evolve.  Composition and care: Metal and wipe clean. Dimensions: 35l x 33w x 31h",
-      stock: "30",
-      image:
-        ["ryan_coffee_table_b.webp", "ryan_coffee_table_e.webp",],
-      highlight: false,
-      categoryId: 4
-    },
 
     //Storage and organization
     {
@@ -484,21 +473,10 @@ module.exports = async () => {
         "Make your space bloom with this 2-in-1 taper candle and incense holder by Areaware. Made using concrete and painted in vibrant hues, this heavyweight floral-shaped candle and incense holder infuses your space with a playful pop of whimsy. Perfect for dressing up your shelf displays and accent tables, turn the bud side up to burn your stick incense or bloom side up to burn your fave taper candle.  Composition and care: Cement, paint, stainless steel plate, brass sleeve and wipe clean. Dimensions: 35l x 33w x 31h",
       stock: "200",
       image:
-        ["areaware_Candle_holder_b.webp", "areaware_Candle_holder_f.webp",],
+        ["areaware_candle_holder_b.webp", "areaware_candle_holder_f.webp",],
       highlight: false,
       categoryId: 6
     },
-    // {
-    //   name: "Areaware Poppy Taper Candle & Incense Holder",
-    //   price: "189",
-    //   description:
-    //     "The perfect addition to your minimalist haven, this checkerboard tufted rug brings a cozy feel to any space. Made with tufted cotton that’s so cushy to the touch. Composition and care: 100% Cotton and spot clean. Dimensions: 35l x 33w x 31h",
-    //   stock: "200",
-    //   image:
-    //     ["checkerboard_rug_b.webp", "checkerboard_rug_f.webp",],
-    //   highlight: false,
-    //   categoryId: 6
-    // },
     {
       name: "Varena Arched Large Wall Mirror",
       price: "199",

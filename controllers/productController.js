@@ -1,11 +1,10 @@
 const {Product, Category} = require ("../models");
 
-
-// Display a listing of the resource.
-const index= async (req, res) => {
+// CRUD
+const index = async (req, res) => {
   const result = await Product.findAll();
-  res.json({products: result})
-}
+  res.json({ products: result });
+};
 
 // Display the specified resource.
 async function show(req, res) {}
@@ -25,7 +24,7 @@ async function update(req, res) {}
 // Remove the specified resource from storage.
 async function destroy(req, res) {}
 
-async function getProductByCategory(req, res) {
+async function getByCategory(req, res) {
   const categories = await Category.findAll();
   const categoryId = req.params.id;
   const products = await Product.findAll({
@@ -33,8 +32,9 @@ async function getProductByCategory(req, res) {
       categoryId: req.params.id,
     }
   })
-  res.json({products: products})
-}
+  res.json({ products: products })
+};
+
 
 module.exports = {
   index,
@@ -44,5 +44,5 @@ module.exports = {
   edit,
   update,
   destroy,
-  getProductByCategory
+  getByCategory,
 };
