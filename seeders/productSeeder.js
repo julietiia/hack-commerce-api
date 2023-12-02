@@ -194,6 +194,7 @@ module.exports = async () => {
       image:
         ["alana_table_b.webp", "alana_table_d.webp",],
       highlight: false,
+      categoryId: 4
     },
     {
       name: "Emory Coffee Table",
@@ -272,8 +273,6 @@ module.exports = async () => {
       highlight: false,
       categoryId: 4
     },
-<<<<<<< Updated upstream
-=======
     {
       name: "Ryan Coffee Table",
       price: "149",
@@ -285,7 +284,6 @@ module.exports = async () => {
       highlight: false,
       categoryId: 4
     },
->>>>>>> Stashed changes
 
     //Storage and organization
     {
@@ -486,25 +484,21 @@ module.exports = async () => {
         "Make your space bloom with this 2-in-1 taper candle and incense holder by Areaware. Made using concrete and painted in vibrant hues, this heavyweight floral-shaped candle and incense holder infuses your space with a playful pop of whimsy. Perfect for dressing up your shelf displays and accent tables, turn the bud side up to burn your stick incense or bloom side up to burn your fave taper candle.  Composition and care: Cement, paint, stainless steel plate, brass sleeve and wipe clean. Dimensions: 35l x 33w x 31h",
       stock: "200",
       image:
-<<<<<<< Updated upstream
-        ["areaware_candle_holder_b.webp", "areaware_candle_holder_f.webp",],
-=======
         ["areaware_Candle_holder_b.webp", "areaware_Candle_holder_f.webp",],
       highlight: false,
       categoryId: 6
     },
-    {
-      name: "Areaware Poppy Taper Candle & Incense Holder",
-      price: "189",
-      description:
-        "The perfect addition to your minimalist haven, this checkerboard tufted rug brings a cozy feel to any space. Made with tufted cotton that’s so cushy to the touch. Composition and care: 100% Cotton and spot clean. Dimensions: 35l x 33w x 31h",
-      stock: "200",
-      image:
-        ["checkerboard_rug_b.webp", "checkerboard_rug_f.webp",],
->>>>>>> Stashed changes
-      highlight: false,
-      categoryId: 6
-    },
+    // {
+    //   name: "Areaware Poppy Taper Candle & Incense Holder",
+    //   price: "189",
+    //   description:
+    //     "The perfect addition to your minimalist haven, this checkerboard tufted rug brings a cozy feel to any space. Made with tufted cotton that’s so cushy to the touch. Composition and care: 100% Cotton and spot clean. Dimensions: 35l x 33w x 31h",
+    //   stock: "200",
+    //   image:
+    //     ["checkerboard_rug_b.webp", "checkerboard_rug_f.webp",],
+    //   highlight: false,
+    //   categoryId: 6
+    // },
     {
       name: "Varena Arched Large Wall Mirror",
       price: "199",
@@ -516,17 +510,17 @@ module.exports = async () => {
       highlight: false,
       categoryId: 6
     },
-    {
-      name: "Waverly Arch Mirror",
-      price: "199",
-      description:
-        "Create a standout statement in your space with this large body mirror featuring a wavy frame carved from tubular mango wood. Mix and match with other favorite mirrors from our Waverly collection to create an artfully eclectic gallery. Composition and care: Mango wood, MDF, mirror and wipe clean. Dimensions: 35l x 33w x 31h",
-      stock: "90",
-      image:
-        ["waverly_mirror_b.webp", "waverly_mirror_d.webp",],
-      highlight: false,
-      categoryId: 6
-    },
+    // {
+    //   name: "Waverly Arch Mirror",
+    //   price: "199",
+    //   description:
+    //     "Create a standout statement in your space with this large body mirror featuring a wavy frame carved from tubular mango wood. Mix and match with other favorite mirrors from our Waverly collection to create an artfully eclectic gallery. Composition and care: Mango wood, MDF, mirror and wipe clean. Dimensions: 35l x 33w x 31h",
+    //   stock: "90",
+    //   image:
+    //     ["waverly_mirror_b.webp", "waverly_mirror_d.webp",],
+    //   highlight: false,
+    //   categoryId: 6
+    // },
     {
       name: "Felix Medium Folding Storage Crate",
       price: "12",
@@ -569,6 +563,7 @@ module.exports = async () => {
       image:
         ["checkerboard_rug_b.webp", "checkerboard_rug_f.webp",],
       highlight: false,
+      categoryId: 6
     },
     {
       name: "Moodcast Candle",
@@ -579,6 +574,7 @@ module.exports = async () => {
       image:
         ["moodcastcandle_b.webp", "moodcastcandle_d.webp",],
       highlight: false,
+      categoryId: 6
     },
 
 
