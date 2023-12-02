@@ -27,7 +27,7 @@ User.hasMany(Order);
 Order.belongsTo(User);
 
 Category.hasMany(Product);
-Product.belongsTo(Category);
+Product.belongsTo(Category, { foreignKey: 'categoryId' });
 
 
 

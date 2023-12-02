@@ -27,6 +27,9 @@ class Product extends Model {
         highlight: {
           type: DataTypes.BOOLEAN,
         },
+        categoryId: {
+          type: DataTypes.BIGINT.UNSIGNED,
+        }
        
       },
       {
