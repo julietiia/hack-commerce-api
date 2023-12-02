@@ -12,6 +12,7 @@ module.exports = async () => {
       image:
         ["floria_velvet_chair_b.webp", "floria_velvet_chair_b.webp"],
       highlight: true,
+      categoryId: 1
     },
     {
       name: "Charlotte Swivel Chair",
@@ -22,6 +23,7 @@ module.exports = async () => {
       image:
         ["charlotte_chair_b.webp", "charlotte_chair_b.webp"],
       highlight: true,
+      categoryId: 1
     },
     {
       name: "Greta Chair",
@@ -32,6 +34,7 @@ module.exports = async () => {
       image:
         ["greta_chair_d.webp", "greta_chair_e.webp"],
       highlight: true,
+      categoryId: 1
     },
     {
       name: "Felix Chair",
@@ -42,6 +45,7 @@ module.exports = async () => {
       image:
         ["felix_chair_b.webp", "felix_chair_e.webp"],
       highlight: true,
+      categoryId: 1
     },
     {
       name: "Lennon Chair",
@@ -52,6 +56,7 @@ module.exports = async () => {
       image:
         ["lennon_chair_b.webp", "lennon_chair_d.webp"],
       highlight: false,
+      categoryId: 1
     },
     {
       name: "Wally Curvature Chair",
@@ -62,6 +67,7 @@ module.exports = async () => {
       image:
         ["wally_chair_b.webp", "wally_chair_d.webp"],
       highlight: false,
+      categoryId: 1
     },
     {
       name: "Alexia Lounge Chair",
@@ -72,6 +78,7 @@ module.exports = async () => {
       image:
         ["alexia_chair_b.webp", "alexia_chair_d.webp"],
       highlight: false,
+      categoryId: 1
     },
     {
       name: "Rhea Chair",
@@ -82,6 +89,7 @@ module.exports = async () => {
       image:
         ["rhea_chair_d.webp", "rhea_chair_e.webp"],
       highlight: false,
+      categoryId: 1
     },
   
     
@@ -96,6 +104,7 @@ module.exports = async () => {
       image:
         ["benji_modular_sofa_b.webp", "benji_modular_sofa_b.webp"],
       highlight: false,
+      categoryId: 2
     },
     {
       name: "Macy Modular Sofa",
@@ -106,6 +115,7 @@ module.exports = async () => {
       image:
         ["macy_modular_sofa_b.webp", "benji_modular_sofa_d.webp","benji_modular_sofa_e.webp"],
       highlight: false,
+      categoryId: 2
     },
     {
       name: "Corium Modular Sofa",
@@ -116,6 +126,7 @@ module.exports = async () => {
       image:
         ["corium_sofa_b.webp", "corium_sofa_b.webp",],
       highlight: false,
+      categoryId: 2
     },
     {
       name: "Yoji Sofa",
@@ -126,6 +137,7 @@ module.exports = async () => {
       image:
         ["yoji_sofa_b.webp", "yoji_sofa_d.webp",],
       highlight: false,
+      categoryId: 2
     },
     {
       name: "Isobel Sofa",
@@ -136,6 +148,7 @@ module.exports = async () => {
       image:
         ["isobel_sofa_b.webp", "isobel_sofa_d.webp",],
       highlight: false,
+      categoryId: 2
     },
     {
       name: "Juliette Tufted Velvet Love Seat",
@@ -146,6 +159,7 @@ module.exports = async () => {
       image:
         ["juliette_sofa_b.webp", "juliette_sofa_d.webp",],
       highlight: false,
+      categoryId: 2
     },
     {
       name: "Felix Sofa",
@@ -156,6 +170,7 @@ module.exports = async () => {
       image:
         ["felix_sofa_b.webp", "felix_sofa_d.webp",],
       highlight: false,
+      categoryId: 2
     },
     {
       name: "Floria Velvet Settee Sofa",
@@ -166,6 +181,7 @@ module.exports = async () => {
       image:
         ["floria_sofa_b.webp", "floria_sofa_d.webp",],
       highlight: false,
+      categoryId: 2
     },
 
     //Tables
@@ -188,6 +204,7 @@ module.exports = async () => {
       image:
         ["emory_table_b.webp", "emory_table_e.webp",],
       highlight: false,
+      categoryId: 4
     },
     {
       name: "Kane Coffee Table",
@@ -198,6 +215,7 @@ module.exports = async () => {
       image:
         ["kane_table_d.webp", "kane_table_f.webp",],
       highlight: false,
+      categoryId: 4
     },
     {
       name: "Daphne Concrete Dining Table",
@@ -208,6 +226,7 @@ module.exports = async () => {
       image:
         ["daphne_table_b.webp", "daphne_table_d.webp",],
       highlight: false,
+      categoryId: 4
     },
     {
       name: "Silas Coffee Table",
@@ -218,6 +237,7 @@ module.exports = async () => {
       image:
         ["silas_table_b.webp", "silas_table_e.webp",],
       highlight: false,
+      categoryId: 4
     },
     {
       name: "Aria Coffee Table",
@@ -228,6 +248,7 @@ module.exports = async () => {
       image:
         ["aria_table_b.webp", "aria_table_e.webp",],
       highlight: false,
+      categoryId: 4
     },
     {
       name: "Silas Dining Table",
@@ -238,6 +259,7 @@ module.exports = async () => {
       image:
         ["silas_dining_table_b.webp", "silas_dining_table_e.webp",],
       highlight: false,
+      categoryId: 4
     },
     {
       name: "Ryan Coffee Table",
@@ -248,7 +270,22 @@ module.exports = async () => {
       image:
         ["ryan_coffee_table_b.webp", "ryan_coffee_table_e.webp",],
       highlight: false,
+      categoryId: 4
     },
+<<<<<<< Updated upstream
+=======
+    {
+      name: "Ryan Coffee Table",
+      price: "149",
+      description:
+        "Refresh your living space with this metal coffee table with removable wheels. With eye-catching powder-coated finishes, this table features a square tabletop with sleek and structural legs. Option to set on wheels so you can move it wherever you need additional surface area. With simple construction that offers a timeless piece to your home collection that can move with you as your spaces and styles evolve.  Composition and care: Metal and wipe clean. Dimensions: 35l x 33w x 31h",
+      stock: "30",
+      image:
+        ["ryan_coffee_table_b.webp", "ryan_coffee_table_e.webp",],
+      highlight: false,
+      categoryId: 4
+    },
+>>>>>>> Stashed changes
 
     //Storage and organization
     {
@@ -260,6 +297,7 @@ module.exports = async () => {
       image:
         ["low_storage_locker_b.webp", "low_storage_locker_d.webp",],
       highlight: false,
+      categoryId: 5
     },
     {
       name: "Ryan Storage Cart",
@@ -270,6 +308,7 @@ module.exports = async () => {
       image:
         ["ryan_storage_cart_b.webp", "ryan_storage_cart_d.webp",],
       highlight: false,
+      categoryId: 5
     },
     {
       name: "Alana Side Table/Nightstand",
@@ -280,6 +319,7 @@ module.exports = async () => {
       image:
         ["alana_side_table_b.webp", "alana_side_table_e.webp",],
       highlight: false,
+      categoryId: 5
     },
     {
       name: "Hugo Desk",
@@ -290,6 +330,7 @@ module.exports = async () => {
       image:
         ["hugo_desk_b.webp", "hugo_desk_d.webp",],
       highlight: false,
+      categoryId: 5
     },
     {
       name: "Silas Desk",
@@ -300,6 +341,7 @@ module.exports = async () => {
       image:
         ["silas_desk_b.webp", "silas_desk_d.webp",],
       highlight: false,
+      categoryId: 5
     },
     {
       name: "Alana Large Bookshelf",
@@ -310,6 +352,7 @@ module.exports = async () => {
       image:
         ["alana_bookshelf_b.webp", "alana_bookshelf_d.webp",],
       highlight: false,
+      categoryId: 5
     },
     {
       name: "Mason Metal Bookshelf",
@@ -320,6 +363,7 @@ module.exports = async () => {
       image:
         ["mason_metal_bookshelf_b.webp", "mason_metal_bookshelf_d.webp",],
       highlight: false,
+      categoryId: 5
     },
     {
       name: "Arched Storage Shelf",
@@ -330,6 +374,7 @@ module.exports = async () => {
       image:
         ["arched_storage_shelf_b.webp", "arched_storage_shelf_d.webp",],
       highlight: false,
+      categoryId: 5
     },
     {
       name: "Ebba Bookshelf",
@@ -340,6 +385,7 @@ module.exports = async () => {
       image:
         ["ebba_bookshelf_b.webp", "ebba_bookshelf_d.webp",],
       highlight: false,
+      categoryId: 5
     },
 
     //Lightning
@@ -352,6 +398,7 @@ module.exports = async () => {
       image:
         ["little_glass_table_lamp_b.webp", "little_glass_table_d.webp",],
       highlight: false,
+      categoryId: 3
     },
     {
       name: "Cohen Table Lamp",
@@ -362,6 +409,7 @@ module.exports = async () => {
       image:
         ["cohen_table_lamp_b.webp", "cohen_table_d.webp",],
       highlight: false,
+      categoryId: 3
     },
     {
       name: "Wally Sconce",
@@ -372,6 +420,7 @@ module.exports = async () => {
       image:
         ["wally_sconce_lamp_b.webp", "wally_sconce_lamp_d.webp",],
       highlight: false,
+      categoryId: 3
     },
     {
       name: "Wiatt Floor Lamp",
@@ -382,6 +431,7 @@ module.exports = async () => {
       image:
         ["wiatt_floor_lamp_d.webp", "wiatt_floor_lamp_e.webp",],
       highlight: false,
+      categoryId: 3
     },
     {
       name: "Wally Floor Lamp",
@@ -392,6 +442,7 @@ module.exports = async () => {
       image:
         ["wally_floor_lamp_b.webp", "wally_floor_lamp_d.webp",],
       highlight: false,
+      categoryId: 3
     },
     {
       name: "Ansel Glass Table Lamp",
@@ -402,6 +453,7 @@ module.exports = async () => {
       image:
         ["ansel_lamp_b.webp", "ansel_lamp_d.webp",],
       highlight: false,
+      categoryId: 3
     },
     {
       name: "Wally Table Lamp",
@@ -412,6 +464,7 @@ module.exports = async () => {
       image:
         ["wallie_lamp_b.webp", "wallie_lamp_d.webp",],
       highlight: false,
+      categoryId: 3
     },
     {
       name: "Alora Floor Lamp",
@@ -422,6 +475,7 @@ module.exports = async () => {
       image:
         ["alora_floor_lamp_b.webp", "alora_floor_lamp_e.webp",],
       highlight: false,
+      categoryId: 3
     },
     
     //Deco
@@ -432,8 +486,24 @@ module.exports = async () => {
         "Make your space bloom with this 2-in-1 taper candle and incense holder by Areaware. Made using concrete and painted in vibrant hues, this heavyweight floral-shaped candle and incense holder infuses your space with a playful pop of whimsy. Perfect for dressing up your shelf displays and accent tables, turn the bud side up to burn your stick incense or bloom side up to burn your fave taper candle.  Composition and care: Cement, paint, stainless steel plate, brass sleeve and wipe clean. Dimensions: 35l x 33w x 31h",
       stock: "200",
       image:
+<<<<<<< Updated upstream
         ["areaware_candle_holder_b.webp", "areaware_candle_holder_f.webp",],
+=======
+        ["areaware_Candle_holder_b.webp", "areaware_Candle_holder_f.webp",],
       highlight: false,
+      categoryId: 6
+    },
+    {
+      name: "Areaware Poppy Taper Candle & Incense Holder",
+      price: "189",
+      description:
+        "The perfect addition to your minimalist haven, this checkerboard tufted rug brings a cozy feel to any space. Made with tufted cotton that’s so cushy to the touch. Composition and care: 100% Cotton and spot clean. Dimensions: 35l x 33w x 31h",
+      stock: "200",
+      image:
+        ["checkerboard_rug_b.webp", "checkerboard_rug_f.webp",],
+>>>>>>> Stashed changes
+      highlight: false,
+      categoryId: 6
     },
     {
       name: "Varena Arched Large Wall Mirror",
@@ -444,6 +514,7 @@ module.exports = async () => {
       image:
         ["varena_wall_mirror_b.webp", "varena_wall_mirror_d.webp",],
       highlight: false,
+      categoryId: 6
     },
     {
       name: "Waverly Arch Mirror",
@@ -454,6 +525,7 @@ module.exports = async () => {
       image:
         ["waverly_mirror_b.webp", "waverly_mirror_d.webp",],
       highlight: false,
+      categoryId: 6
     },
     {
       name: "Felix Medium Folding Storage Crate",
@@ -464,6 +536,7 @@ module.exports = async () => {
       image:
         ["felix_storage_b.webp", "felix_storage_d.webp",],
       highlight: false,
+      categoryId: 6
     },
     {
       name: "Squiggle Throw Pillow",
@@ -474,6 +547,7 @@ module.exports = async () => {
       image:
         ["squiggle_pillow_b.webp", "squiggle_pillow_e.webp",],
       highlight: false,
+      categoryId: 6
     },
     {
       name: "Nala Wall Multi-Hook",
@@ -484,6 +558,7 @@ module.exports = async () => {
       image:
         ["nala_multihook_b.webp", "nala_multihook_e.webp",],
       highlight: false,
+      categoryId: 6
     },
     {
       name: "Checkerboard Hilo Minimal Tufted Rug",
