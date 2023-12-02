@@ -18,6 +18,10 @@ class Product extends Model {
         description: {
           type: DataTypes.TEXT,
         },
+        productDetail: {
+          type: DataTypes.TEXT,
+        },
+
         stock: {
           type: DataTypes.INTEGER,
         },
