@@ -1,4 +1,4 @@
-const {Product} = require ("../models");
+const {Product, Category} = require ("../models");
 
 
 // Display a listing of the resource.
@@ -25,8 +25,16 @@ async function update(req, res) {}
 // Remove the specified resource from storage.
 async function destroy(req, res) {}
 
-// Otros handlers...
-// ...
+async function getProductByCategory(req, res) {
+  const categories = await Category.findAll();
+  const categoryId = req.params.id;
+  const products = await Product.findAll({
+    where: {
+      categoryId: req.params.id,
+    }
+  })
+  res.json({products: products})
+}
 
 module.exports = {
   index,
@@ -36,4 +44,5 @@ module.exports = {
   edit,
   update,
   destroy,
+  getProductByCategory
 };
