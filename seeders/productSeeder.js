@@ -482,7 +482,7 @@ module.exports = async () => {
         "Wavy wall hook with seven sturdy hooks ready for hanging all your stuff. Composition and care: 100% Cotton; 100% Iron and wipe clean. Dimensions: 35l x 33w x 31h",
       stock: "150",
       image:
-        ["nala_multihook_b.webp", "nala_multihook_e.webp",],
+        ["nala_multihook_d.webp","nala_multihook_b.webp"],
       highlight: false,
     },
     {
