@@ -15,7 +15,7 @@ class Category extends Model {
         description: {
           type: DataTypes.TEXT,
         },
-        images: {
+        image: {
           type: DataTypes.STRING,
         },
         code: {
