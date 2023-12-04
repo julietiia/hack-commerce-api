@@ -110,7 +110,7 @@ module.exports = async () => {
       productDetail:
         "Composition & Care: Polyester, pine wood, plywood. Spot clean. Dimensions: 35l x 33w x 31h",
       stock: "50",
-      image: ["benji_modular_sofa_b.webp", "benji_modular_sofa_b.webp"],
+      image: ["benji_modular_sofa_b.webp", "benji_modular_sofa_d.webp"],
       highlight: false,
       categoryId: 2,
     },
