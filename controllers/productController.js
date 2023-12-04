@@ -15,29 +15,6 @@ async function create(req, res) {}
 
 // Store a newly created resource in storage.
 async function store(req, res) {
-  try {
-    const productId = req.params.id;
-    const product = await Product.findByPk(productId);
-
-    if (!product){
-      return res.status(404).json ({ error: "Product not found"});
-    }
-
-    const categoryId = product.categoryId;
-
-    const similarProducts = await Product.findAll ({
-      where: {
-        categoryId: categoryId,
-        id: {
-          [Op.notIn]: [productId],
-        },
-      },
-      limit: 4,
-    });
-    res.json ({products: similarProducts})
-  } catch (error){
-    console.log ("Error fetching simmilar products:", error.message)
-  }
 }
 
 // Show the form for editing the specified resource.
