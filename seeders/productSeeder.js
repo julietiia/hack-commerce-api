@@ -49,7 +49,7 @@ module.exports = async () => {
         "Composition & Care: Polyester, poplar wood, plywood and spot clean .Dimensions: 35l x 33w x 31h",
       stock: "47",
       image: ["felix_chair_b.webp", "felix_chair_e.webp"],
-      highlight: true,
+      highlight: false,
       categoryId: 1,
     },
     {
@@ -73,7 +73,7 @@ module.exports = async () => {
         "Composition & Care: Polyether sulfone, nylon, steel, plywood. Spot clean. Dimensions: 35l x 33w x 31h",
       stock: "45",
       image: ["wally_chair_b.webp", "wally_chair_d.webp"],
-      highlight: false,
+      highlight: true,
       categoryId: 1,
     },
     {
