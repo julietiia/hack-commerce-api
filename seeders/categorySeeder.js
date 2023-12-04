@@ -17,10 +17,10 @@ module.exports = async () => {
         code: 20,
     },
     {
-      name: "Lighting",
+      name: "Lightning",
       description:
         "Lighting or illumination is the deliberate use of light to achieve practical or aesthetic effects. Lighting includes the use of both artificial light sources like lamps and light fixtures, as well as natural illumination by capturing daylight.​",
-        image: "bannerlighting.jpg",
+        image: "bannerlightning.jpg",
       code: 30,
     },
     {
