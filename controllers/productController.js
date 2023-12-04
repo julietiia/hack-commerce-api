@@ -57,7 +57,8 @@ async function getByCategory(req, res) {
       categoryId: req.params.id,
     }
   })
-  res.json({ products: products })
+  const selectedCategory = await Category.findByPk(categoryId);
+  res.json({ category: selectedCategory, products: products })
 };
 
 
