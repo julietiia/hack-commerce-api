@@ -1,4 +1,6 @@
 const { User } = require("../models");
+const bcrypt = require("bcryptjs");
+const formidable = require("formidable");
 
 // Display a listing of the resource.
 async function index(req, res) {}
@@ -10,7 +12,20 @@ async function show(req, res) {}
 async function create(req, res) {}
 
 // Store a newly created resource in storage.
-async function store(req, res) {}
+async function store(req, res) {
+  const { firstname, lastname, email, password, address, phone } = req.body;
+  const hashedPassword = await bcrypt.hash(password, 5);
+
+  await User.create({
+    firstname,
+    lastname,
+    email,
+    address,
+    phone,
+    password: hashedPassword,
+  });
+  res.json("Se creó un usuario");
+}
 
 // Show the form for editing the specified resource.
 async function edit(req, res) {}
