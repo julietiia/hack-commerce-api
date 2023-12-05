@@ -1,9 +1,11 @@
-const { User } = require("../models");
-const bcrypt = require("bcryptjs");
-const formidable = require("formidable");
+const {Category} = require ("../models/Category")
+
 
 // Display a listing of the resource.
-async function index(req, res) {}
+async function index(req, res) {
+    const result = await Category.findAll();
+    res.json({ categories: result });
+};
 
 // Display the specified resource.
 async function show(req, res) {}
@@ -13,20 +15,23 @@ async function create(req, res) {}
 
 // Store a newly created resource in storage.
 async function store(req, res) {
-  console.log(req.body)
-  const { firstname, lastname, email, password, address, phone } = req.body;
-  const hashedPassword = await bcrypt.hash(password, 5);
+    const form = formidable({
+        multiples: true,
+        uploadDir: __dirname + "/../public/img",
+        keepExtensions: true,
+      });
+      form.parse(req, async (err, fields, files) => {
+        await Category.create({
+          name: fields.name,
+          description: fields.description,
+          image: files.image.newFilename
+        });
+    
+        return res.redirect("/admin-category");
+      });
+    }
+    
 
-  await User.create({
-    firstname,
-    lastname,
-    email,
-    address,
-    phone,
-    password: hashedPassword,
-  });
-  res.json("Se creó un usuario");
-}
 
 // Show the form for editing the specified resource.
 async function edit(req, res) {}
