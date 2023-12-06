@@ -1,5 +1,4 @@
-const {Order} = require ("../models/Order")
-
+const { Order } = require("../models");
 
 // Display a listing of the resource.
 async function index(req, res) {}
@@ -8,24 +7,19 @@ async function index(req, res) {}
 async function show(req, res) {}
 
 // Show the form for creating a new resource
-async function create(req, res) {
-
-}
+async function create(req, res) {}
 
 // Store a newly created resource in storage.
 async function store(req, res) {
-    const { firstname, lastname, email, password, address, phone } = req.body;
-  const hashedPassword = await bcrypt.hash(password, 5);
+  console.log(req.body)
+  console.log(req.body.cartProducts);
+  const products = req.body;
 
-  await User.create({
-    firstname,
-    lastname,
-    email,
-    address,
-    phone,
-    password: hashedPassword,
-  });
-  res.json("Se creó un usuario");
+  await Order.create({
+    products,
+    userId: req.auth.sub,
+  })
+  res.json("Se ha creado una orden");
 }
 
 // Show the form for editing the specified resource.
