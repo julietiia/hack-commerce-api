@@ -21,14 +21,14 @@ async function store(req, res) {
         keepExtensions: true,
       });
       form.parse(req, async (err, fields, files) => {
-        const { name, description, image } = fields;
+        const { name, description, categoryImage } = fields;
 
     const newCategory = await Category.create({
       name,
       description,
-      image: files.image.newFilename,
+      categoryImage: files.categoryImage.newFilename,
     });
-    return res.json({ newCategory });
+    return res.json( "se creo una nueva categoria" );
   });
 }
     //     await Category.create({
