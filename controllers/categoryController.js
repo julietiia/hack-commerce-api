@@ -52,7 +52,14 @@ async function edit(req, res) {}
 async function update(req, res) {}
 
 // Remove the specified resource from storage.
-async function destroy(req, res) {}
+async function destroy(req, res) {
+  console.log(req.params)
+  // const category = await Category.findByPk(req.params.id);
+  const id = req.params.id
+  await Category.destroy({ where: { id: req.params.id } });
+  console.log("categoria eliminada")
+  res.json({ message: "Category deleted successfully." });
+}
 
 // Otros handlers...
 // ...
