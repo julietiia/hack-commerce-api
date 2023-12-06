@@ -1,4 +1,5 @@
-const {Category} = require ("../models");
+const {Category, Product} = require ("../models");
+const formidable = require ("formidable");
 
 // Display a listing of the resource.
 async function index(req, res) {
@@ -20,15 +21,25 @@ async function store(req, res) {
         keepExtensions: true,
       });
       form.parse(req, async (err, fields, files) => {
-        await Category.create({
-          name: fields.name,
-          description: fields.description,
-          image: files.image.newFilename
-        });
+        const { name, description, image } = fields;
+
+    const newCategory = await Category.create({
+      name,
+      description,
+      image: files.image.newFilename,
+    });
+    return res.json({ newCategory });
+  });
+}
+    //     await Category.create({
+    //       name: fields.name,
+    //       description: fields.description,
+    //       image: files.image.newFilename
+    //     });
     
-        return res.redirect("/admin-category");
-      });
-    }
+    //     return res.redirect("/admin-category");
+    //   });
+    // }
     
 
 

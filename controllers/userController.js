@@ -5,8 +5,8 @@ const formidable = require("formidable");
 
 // Display a listing of the resource.
 async function index(req, res) {
-  const result = await User.findByPk(req.params);
-  res.json({ users: result });
+  const result = await User.findOne(req.params);
+  res.json({ customers: result });
 };
 
 
