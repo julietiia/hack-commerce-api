@@ -2,8 +2,12 @@ const { User } = require("../models");
 const bcrypt = require("bcryptjs");
 const formidable = require("formidable");
 
+
 // Display a listing of the resource.
-async function index(req, res) {}
+async function index(req, res) {
+  const result = await User.findAll();
+  res.json({ customers: result });
+}
 
 // Display the specified resource.
 async function show(req, res) {}

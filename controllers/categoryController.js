@@ -1,11 +1,10 @@
-const {Category} = require ("../models/Category")
-
+const {Category} = require ("../models");
 
 // Display a listing of the resource.
 async function index(req, res) {
-    const result = await Category.findAll();
-    res.json({ categories: result });
-};
+  const result = await Category.findAll();
+  res.json({ categories: result });
+}
 
 // Display the specified resource.
 async function show(req, res) {}
