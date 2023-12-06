@@ -1,10 +1,11 @@
-const {Category} = require ("../models");
+const {Category} = require ("../models/Category")
+
 
 // Display a listing of the resource.
 async function index(req, res) {
-  const result = await Category.findAll();
-  res.json({ categories: result });
-}
+    const result = await Category.findAll();
+    res.json({ categories: result });
+};
 
 // Display the specified resource.
 async function show(req, res) {}
@@ -13,7 +14,24 @@ async function show(req, res) {}
 async function create(req, res) {}
 
 // Store a newly created resource in storage.
-async function store(req, res) {}
+async function store(req, res) {
+    const form = formidable({
+        multiples: true,
+        uploadDir: __dirname + "/../public/img",
+        keepExtensions: true,
+      });
+      form.parse(req, async (err, fields, files) => {
+        await Category.create({
+          name: fields.name,
+          description: fields.description,
+          image: files.image.newFilename
+        });
+    
+        return res.redirect("/admin-category");
+      });
+    }
+    
+
 
 // Show the form for editing the specified resource.
 async function edit(req, res) {}

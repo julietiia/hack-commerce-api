@@ -13,6 +13,7 @@ async function create(req, res) {}
 
 // Store a newly created resource in storage.
 async function store(req, res) {
+  console.log(req.body)
   const { firstname, lastname, email, password, address, phone } = req.body;
   const hashedPassword = await bcrypt.hash(password, 5);
 
