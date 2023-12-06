@@ -18,6 +18,9 @@ class User extends Model {
         address: {
           type: DataTypes.STRING,
         },
+        phone: {
+          type: DataTypes.BIGINT,
+        },
         email: {
           type: DataTypes.STRING,
         },
