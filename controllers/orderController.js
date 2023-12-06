@@ -1,31 +1,20 @@
-const { User } = require("../models");
-const bcrypt = require("bcryptjs");
-const formidable = require("formidable");
+const {Order} = require ("../models/Order")
 
 
 // Display a listing of the resource.
-async function index(req, res) {
-<<<<<<< Updated upstream
-  const result = await User.findAll();
-  res.json({ customers: result });
-}
-=======
-  const result = await User.findByPk(req.params);
-  res.json({ users: result });
-};
-
->>>>>>> Stashed changes
+async function index(req, res) {}
 
 // Display the specified resource.
 async function show(req, res) {}
 
 // Show the form for creating a new resource
-async function create(req, res) {}
+async function create(req, res) {
+
+}
 
 // Store a newly created resource in storage.
 async function store(req, res) {
-  console.log(req.body)
-  const { firstname, lastname, email, password, address, phone } = req.body;
+    const { firstname, lastname, email, password, address, phone } = req.body;
   const hashedPassword = await bcrypt.hash(password, 5);
 
   await User.create({
