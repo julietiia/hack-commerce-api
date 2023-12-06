@@ -6,13 +6,8 @@ const userController = require("../controllers/userController");
 
 // Rutas relacionadas a la parte pública del sitio web:
 // ...
-<<<<<<< Updated upstream
 router.get("/products", productController.index); //Envía todos los productos al Admin
 router.get("/categories", categoryController.index); //Envía todas las categorías al Admin
 router.get("/customers", userController.index); //Envía todos los usuarios/customers al Admin
 router.get("/category/:id", productController.getByCategory);
-=======
-
-router.get("/category/:id", productController.getByCategory)
->>>>>>> Stashed changes
 module.exports = router;

@@ -5,16 +5,10 @@ const formidable = require("formidable");
 
 // Display a listing of the resource.
 async function index(req, res) {
-<<<<<<< Updated upstream
-  const result = await User.findAll();
-  res.json({ customers: result });
-}
-=======
   const result = await User.findByPk(req.params);
   res.json({ users: result });
 };
 
->>>>>>> Stashed changes
 
 // Display the specified resource.
 async function show(req, res) {}
