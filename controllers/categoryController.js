@@ -1,5 +1,5 @@
 const {Category, Product} = require ("../models");
-const formidable = require ("formidable");
+const formidable = require("formidable");
 
 // Display a listing of the resource.
 async function index(req, res) {
@@ -17,17 +17,19 @@ async function create(req, res) {}
 async function store(req, res) {
     const form = formidable({
         multiples: true,
-        uploadDir: __dirname + "/../public/img",
+        uploadDir: __dirname + "/../public/img/products",
         keepExtensions: true,
       });
       form.parse(req, async (err, fields, files) => {
-        const { name, description, categoryImage } = fields;
+        const { name, description } = fields;
+        console.log(req.body)
 
     const newCategory = await Category.create({
       name,
       description,
-      categoryImage: files.categoryImage.newFilename,
+      image: files.categoryImage.size === 0 ? newCategory.categoryImage : files.categoryImage.newFilename,
     });
+    
     return res.json( "se creo una nueva categoria" );
   });
 }
