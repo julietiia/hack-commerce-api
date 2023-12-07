@@ -14,7 +14,11 @@ async function getToken(req, res) {
 
   return res.json({
     token, 
-    firstname: user.firstname
+    firstname: user.firstname,
+    lastname: user.lastname,
+    email: user.email,
+    address: user.address,
+
   
   });
 }
