@@ -1,7 +1,10 @@
 const { Order } = require("../models");
 
 // Display a listing of the resource.
-async function index(req, res) {}
+async function index(req, res) {
+  const result = await Order.findAll();
+  res.json({ orders: result });
+}
 
 // Display the specified resource.
 async function show(req, res) {}
@@ -11,8 +14,6 @@ async function create(req, res) {}
 
 // Store a newly created resource in storage.
 async function store(req, res) {
-  console.log(req.body)
-  console.log(req.body.cartProducts);
   const products = req.body;
 
   await Order.create({

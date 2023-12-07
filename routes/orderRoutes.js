@@ -5,8 +5,8 @@ const { expressjwt: checkJwt } = require("express-jwt");
 
 // Rutas relacionadas a los usuarios:
 // ...
-router.use(checkJwt({ secret: process.env.JWT_SECRET, algorithms: ["HS256"] }));
 router.get("/", orderController.index);
+router.use(checkJwt({ secret: process.env.JWT_SECRET, algorithms: ["HS256"] }));
 router.get("/crear", orderController.create);
 router.post("/", orderController.store);
 router.get("/:id", orderController.show);
