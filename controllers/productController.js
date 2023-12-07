@@ -1,5 +1,6 @@
-const {Product, Category} = require ("../models");
+const { Product, Category } = require("../models");
 const { Op } = require("sequelize");
+const formidable = require("formidable");
 
 // CRUD
 const index = async (req, res) => {
@@ -14,9 +15,33 @@ async function show(req, res) {}
 async function create(req, res) {}
 
 // Store a newly created resource in storage.
+
 async function store(req, res) {
-  console.log(req.body)
-  res.json ("Funciono") 
+  const form = formidable({
+    multiples: true,
+    uploadDir: __dirname + "/../public/img/products",
+    keepExtensions: true,
+  });
+
+  form.parse(req, async (err, fields, files) => {
+    const { name, description, price, stock, details, highlight, category } = fields;
+    
+    const image1 = files.image1 && files.image1.size > 0 ? files.image1.newFilename : newProduct.image1;
+    const image2 = files.image2 && files.image2.size > 0 ? files.image2.newFilename : newProduct.image2;
+
+    const newProduct = await Product.create({
+      name,
+      description,
+      price,
+      stock,
+      productDetail: details, 
+      highlight,
+      categoryId: category,
+      image: [image1, image2]
+    });
+
+    res.json("Funcionó");
+  });
 }
 
 // Show the form for editing the specified resource.
@@ -34,12 +59,11 @@ async function getByCategory(req, res) {
   const products = await Product.findAll({
     where: {
       categoryId: req.params.id,
-    }
-  })
+    },
+  });
   const selectedCategory = await Category.findByPk(categoryId);
-  res.json({ category: selectedCategory, products: products })
-};
-
+  res.json({ category: selectedCategory, products: products });
+}
 
 module.exports = {
   index,
