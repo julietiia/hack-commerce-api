@@ -13,7 +13,8 @@ async function getToken(req, res) {
   const token = jwt.sign({ sub: user.id }, process.env.JWT_SECRET);
 
   return res.json({
-    token,
+    token, 
+    firstname: user.firstname
   
   });
 }
