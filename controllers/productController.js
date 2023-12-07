@@ -15,6 +15,8 @@ async function create(req, res) {}
 
 // Store a newly created resource in storage.
 async function store(req, res) {
+  console.log(req.body)
+  res.json ("Funciono") 
 }
 
 // Show the form for editing the specified resource.
