@@ -28,6 +28,7 @@ async function store(req, res) {
       name,
       description,
       image: files.categoryImage.size === 0 ? newCategory.categoryImage : files.categoryImage.newFilename,
+      imageIcon: files.categoryImage.size === 0 ? newCategory.categoryImageIcon : files.categoryImageIcon.newFilename,
     });
     
     return res.json( "se creo una nueva categoria" );
