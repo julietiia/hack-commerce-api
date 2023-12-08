@@ -57,7 +57,7 @@ async function destroy(req, res) {
   // const category = await Category.findByPk(req.params.id);
   const id = req.params.id
   await Category.destroy({ where: { id: req.params.id } });
-  console.log("categoria eliminada")
+  console.log("Categoría eliminada:", req.params.id)
   res.json({ message: "Category deleted successfully." });
 }
 

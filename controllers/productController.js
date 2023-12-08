@@ -51,7 +51,12 @@ async function edit(req, res) {}
 async function update(req, res) {}
 
 // Remove the specified resource from storage.
-async function destroy(req, res) {}
+async function destroy(req, res) {
+  console.log(req.params.id)
+  const id = req.params.id
+  await Product.destroy({ where: { id: req.params.id } });
+  res.json("Producto eiminado")
+}
 
 async function getByCategory(req, res) {
   const categories = await Category.findAll();
