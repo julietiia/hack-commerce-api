@@ -65,7 +65,7 @@ module.exports = async () => {
       categoryId: 1,
     },
     {
-      name: "Wally Curvature Chair",
+      name: "Wally Chair",
       price: "899",
       description:
         "Inspired by ‘80s design, this chair features a wavy silhouette with two plush cushions that create a standout modern-minimalist seating option in your space. Upholstered in a poly blend fabric finished with bold colors we love.",
@@ -77,7 +77,7 @@ module.exports = async () => {
       categoryId: 1,
     },
     {
-      name: "Alexia Lounge Chair",
+      name: "Alexia Chair",
       price: "599",
       description:
         "Elevate your reading nooks with this chair featuring a scalloped back rest for a fresh twist on seating essentials. Cushy lounge chair finished with luxuriously plush fabrics. This custom piece of furniture will be made to order just for you.",
@@ -187,7 +187,7 @@ module.exports = async () => {
       categoryId: 2,
     },
     {
-      name: "Floria Velvet Settee Sofa",
+      name: "Floria Velvet Sofa",
       price: "999",
       description:
         "Upholstered allover in rich textures, this settee-style sofa lends a luxurious interpretation of modernist silhouettes to your space. Tri-leg chair features cushions at seat and back, set on a wrapped and folded structure that feels so fresh and unexpected.",
@@ -233,7 +233,7 @@ module.exports = async () => {
       categoryId: 4,
     },
     {
-      name: "Daphne Concrete Dining Table",
+      name: "Daphne Dining Table",
       price: "999",
       description:
         "Industrial-modern dining table, crafted from concrete with a round tabletop set on a tapering pedestal base. Gives your space a sleek statement, perfect for framing colorful meals inside your space or out on your patio.",
@@ -315,7 +315,7 @@ module.exports = async () => {
       categoryId: 5,
     },
     {
-      name: "Alana Side Table/Nightstand",
+      name: "Alana Side Table",
       price: "179",
       description: "Three-tiered side table in modern powder-coated metal.",
       productDetail: "Composition & Care: Metal. Wipe clean. Dimensions: 35l x 33w x 31h",
@@ -348,7 +348,7 @@ module.exports = async () => {
       categoryId: 5,
     },
     {
-      name: "Alana Large Bookshelf",
+      name: "Alana Bookshelf",
       price: "499",
       description:
         "Powder-coated metal bookshelf with a modular look inspired by ‘60s décor. Featuring a variety of compartments with curving edges to store books, records set at a slant, trinkets and more, just the way you like. No two displays will ever be the same!",
@@ -359,7 +359,7 @@ module.exports = async () => {
       categoryId: 5,
     },
     {
-      name: "Mason Metal Bookshelf",
+      name: "Mason Bookshelf",
       price: "499",
       description:
         "Our favorite Mason Bookshelf gets an industrial upgrade with this iron-crafted edition. With an arching frame, this bookshelf features four shelves that are perfect for displaying your plants, trinkets and novels. Complete with colorful powder-coated finishes for vibrant pop.",
@@ -370,7 +370,7 @@ module.exports = async () => {
       categoryId: 5,
     },
     {
-      name: "Arched Storage Shelf",
+      name: "Arched Storage",
       price: "799",
       description:
         "Create a statement display with your novels, vinyl library and trinkets with this storage shelf. Complete with a trio of fixed shelves, this shelf features an engineered wood panel at the front with an arched cutout that transforms your displays into an artful accent. Equipped with a cord cutout in the back panel.",
@@ -394,7 +394,7 @@ module.exports = async () => {
 
     //Lightning
     {
-      name: "Little Glass Table Lamp",
+      name: "Little Glass Lamp",
       price: "49",
       description:
         "Everyone’s favorite little glass table lamp from UO Home. Perfect for your nightstand or bookshelf display, this little glass table lamp features a shaped glass vessel with a standing construction and open top. Frosty glass shade emits a warm glow.",
@@ -454,7 +454,7 @@ module.exports = async () => {
       categoryId: 3,
     },
     {
-      name: "Ansel Glass Table Lamp",
+      name: "Ansel Glass Lamp",
       price: "99",
       description: "Ansel Glass Table Lamp.",
       productDetail:
@@ -489,7 +489,7 @@ module.exports = async () => {
 
     //Deco
     {
-      name: "Areaware Poppy Taper Candle & Incense Holder",
+      name: "Poppy Taper Candle",
       price: "25",
       description:
         "Make your space bloom with this 2-in-1 taper candle and incense holder by Areaware. Made using concrete and painted in vibrant hues, this heavyweight floral-shaped candle and incense holder infuses your space with a playful pop of whimsy. Perfect for dressing up your shelf displays and accent tables, turn the bud side up to burn your stick incense or bloom side up to burn your fave taper candle.",
@@ -501,7 +501,7 @@ module.exports = async () => {
       categoryId: 6,
     },
     {
-      name: "Varena Arched Large Wall Mirror",
+      name: "Varena Wall Mirror",
       price: "199",
       description:
         "Create a chic wall display with this oversized mirror featuring a curving, layered arch silhouette. Crafted with an iron frame in statement metallic finishes and backed with an engineered wood panel for easy hanging. ",
@@ -512,7 +512,7 @@ module.exports = async () => {
       categoryId: 6,
     },
     {
-      name: "Felix Medium Folding Storage Crate",
+      name: "Felix Storage",
       price: "12",
       description:
         "Collapsible storage crate in a versatile design that stacks neatly and comes in a color-pop finish that sets your space apart. With a retro look we love, featuring geometric cutouts, it’s perfect for storing art supplies, desk essentials, snacks, fruit and so much more!",
@@ -523,7 +523,7 @@ module.exports = async () => {
       categoryId: 6,
     },
     {
-      name: "Squiggle Throw Pillow",
+      name: "Squiggle Pillow",
       price: "39",
       description:
         "Add a retro finishing touch to your bed or sofa space with this throw pillow topped with rows of squiggles. Finished with a solid cotton canvas at the back for a cool-crisp touch.",
@@ -534,7 +534,7 @@ module.exports = async () => {
       categoryId: 6,
     },
     {
-      name: "Nala Wall Multi-Hook",
+      name: "Nala Multi-Hook",
       price: "34",
       description: "Wavy wall hook with seven sturdy hooks ready for hanging all your stuff.",
       productDetail: "Composition & Care: 100% Iron. Wipe clean. Dimensions: 35l x 33w x 31h",
@@ -544,7 +544,7 @@ module.exports = async () => {
       categoryId: 6,
     },
     {
-      name: "Checkerboard Hilo Minimal Tufted Rug",
+      name: "Checkerboard Rug",
       price: "189",
       description:
         "No-slip, polyester rug pad coated with high-grade, natural rubber derived from renewable resources. The tight-weave construction allows for air flow to make vacuuming easier. ",
