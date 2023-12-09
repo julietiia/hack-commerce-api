@@ -18,9 +18,7 @@ async function getToken(req, res) {
     lastname: user.lastname,
     email: user.email,
     address: user.address,
-
-  
-  });
+});
 }
 
 module.exports = {

@@ -5,7 +5,13 @@ const bcrypt = require("bcryptjs")
 module.exports = async () => {
   const hashedPassword = await bcrypt.hash("1234", 5);
   const users = [
-
+    {
+      firstname: "Administrador1",
+      lastname: "Administrador1",
+      address: "",
+      email: "admintest@apparat.com",
+      password: hashedPassword,
+    },
   {
     firstname: "Agustín",
     lastname: "Reolón",
