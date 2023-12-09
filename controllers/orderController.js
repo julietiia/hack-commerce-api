@@ -19,7 +19,7 @@ async function store(req, res) {
   await Order.create({
     products,
     userId: req.auth.sub,
-  })
+  });
   res.json("Se ha creado una orden");
 }
 
@@ -27,7 +27,13 @@ async function store(req, res) {
 async function edit(req, res) {}
 
 // Update the specified resource in storage.
-async function update(req, res) {}
+async function update(req, res) {
+  const orderToUpdate = await Order.findByPk(req.params.id);
+  orderToUpdate.update({
+    state: req.body.state,
+  });
+  await orderToUpdate.save({ fields: ['id', 'state'] });
+}
 
 // Remove the specified resource from storage.
 async function destroy(req, res) {}

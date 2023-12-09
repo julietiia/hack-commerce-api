@@ -28,6 +28,7 @@ async function store(req, res) {
       name,
       description,
       image: files.categoryImage.size === 0 ? newCategory.categoryImage : files.categoryImage.newFilename,
+      imageIcon: files.categoryImage.size === 0 ? newCategory.categoryImageIcon : files.categoryImageIcon.newFilename,
     });
     
     return res.json( "se creo una nueva categoria" );
@@ -57,7 +58,7 @@ async function destroy(req, res) {
   // const category = await Category.findByPk(req.params.id);
   const id = req.params.id
   await Category.destroy({ where: { id: req.params.id } });
-  console.log("categoria eliminada")
+  console.log("Categoría eliminada:", req.params.id)
   res.json({ message: "Category deleted successfully." });
 }
 
