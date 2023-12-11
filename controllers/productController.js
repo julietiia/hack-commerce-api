@@ -9,7 +9,12 @@ const index = async (req, res) => {
 };
 
 // Display the specified resource.
-async function show(req, res) {}
+async function show(req, res) {
+  console.log(req.params.id);
+  const product = await Product.findByPk(req.params.id);
+
+  res.json({ product });
+}
 
 // Show the form for creating a new resource
 async function create(req, res) {}
@@ -25,19 +30,21 @@ async function store(req, res) {
 
   form.parse(req, async (err, fields, files) => {
     const { name, description, price, stock, details, highlight, category } = fields;
-    
-    const image1 = files.image1 && files.image1.size > 0 ? files.image1.newFilename : newProduct.image1;
-    const image2 = files.image2 && files.image2.size > 0 ? files.image2.newFilename : newProduct.image2;
+
+    const image1 =
+      files.image1 && files.image1.size > 0 ? files.image1.newFilename : newProduct.image1;
+    const image2 =
+      files.image2 && files.image2.size > 0 ? files.image2.newFilename : newProduct.image2;
 
     const newProduct = await Product.create({
       name,
       description,
       price,
       stock,
-      productDetail: details, 
+      productDetail: details,
       highlight,
       categoryId: category,
-      image: [image1, image2]
+      image: [image1, image2],
     });
 
     res.json("Funcionó");
@@ -52,10 +59,10 @@ async function update(req, res) {}
 
 // Remove the specified resource from storage.
 async function destroy(req, res) {
-  console.log(req.params.id)
-  const id = req.params.id
+  console.log(req.params.id);
+  const id = req.params.id;
   await Product.destroy({ where: { id: req.params.id } });
-  res.json("Producto eiminado")
+  res.json("Producto eiminado");
 }
 
 async function getByCategory(req, res) {
