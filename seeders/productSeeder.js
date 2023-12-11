@@ -13,7 +13,7 @@ module.exports = async () => {
         "Composition & Care: Polyester, pine wood, plywood. Spot clean. Dimensions: 35l x 33w x 31h",
       stock: "70",
       image: ["floria_velvet_chair_b.webp", "floria_velvet_chair_d.webp"],
-      highlight: true,
+      highlight: false,
       categoryId: 1,
     },
     {
@@ -25,7 +25,7 @@ module.exports = async () => {
         "Composition & Care: 71% Viscose, 17% polyester, 12% linen. Spot clean. Dimensions: 35l x 33w x 31h",
       stock: "60",
       image: ["charlotte_chair_b.webp", "charlotte_chair_d.webp"],
-      highlight: true,
+      highlight: false,
       categoryId: 1,
     },
     {
@@ -111,7 +111,7 @@ module.exports = async () => {
         "Composition & Care: Polyester, pine wood, plywood. Spot clean. Dimensions: 35l x 33w x 31h",
       stock: "50",
       image: ["benji_modular_sofa_b.webp", "benji_modular_sofa_d.webp"],
-      highlight: false,
+      highlight: true,
       categoryId: 2,
     },
     {
@@ -252,7 +252,7 @@ module.exports = async () => {
       productDetail: "Composition & Care: MDF, solid wood. Wipe clean. Dimensions: 35l x 33w x 31h",
       stock: "40",
       image: ["silas_table_b.webp", "silas_table_e.webp"],
-      highlight: false,
+      highlight: true,
       categoryId: 4,
     },
     {
@@ -287,7 +287,7 @@ module.exports = async () => {
       productDetail: "  Composition & Care: Metal. Wipe clean. Dimensions: 35l x 33w x 31h",
       stock: "30",
       image: ["ryan_coffee_table_b.webp", "ryan_coffee_table_e.webp"],
-      highlight: false,
+      highlight: true,
       categoryId: 4,
     },
 
@@ -366,7 +366,7 @@ module.exports = async () => {
       productDetail: "Composition & Care: Iron. Wipe clean. Dimensions: 35l x 33w x 31h",
       stock: "15",
       image: ["mason_metal_bookshelf_b.webp", "mason_metal_bookshelf_d.webp"],
-      highlight: false,
+      highlight: true,
       categoryId: 5,
     },
     {
@@ -472,7 +472,7 @@ module.exports = async () => {
       productDetail: "Composition & Care: Poly-resin, iron, glass. Dimensions: 35l x 33w x 31h",
       stock: "18",
       image: ["wallie_lamp_b.webp", "wallie_lamp_e.jpeg"],
-      highlight: false,
+      highlight: true,
       categoryId: 3,
     },
     {
@@ -563,7 +563,7 @@ module.exports = async () => {
       productDetail: "Composition & Care: Coconut wax blend. Dimensions: 35l x 33w x 31h",
       stock: "200",
       image: ["moodcastcandle_b.webp", "moodcastcandle_d.webp"],
-      highlight: false,
+      highlight: true,
       categoryId: 6,
     },
   ];
