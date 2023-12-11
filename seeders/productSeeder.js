@@ -392,7 +392,7 @@ module.exports = async () => {
       categoryId: 5,
     },
 
-    //Lightning
+    //Lighting
     {
       name: "Little Glass Lamp",
       price: "49",
