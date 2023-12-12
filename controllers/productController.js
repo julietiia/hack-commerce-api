@@ -65,10 +65,47 @@ async function store(req, res) {
 }
 
 // Show the form for editing the specified resource.
-async function edit(req, res) {}
+async function edit(req, res) {
+  const product = await Product.findByPk(req.params.id, 
+    );
+    
+    res.json( { product });
+}
 
 // Update the specified resource in storage.
-async function update(req, res) {}
+async function update(req, res) {
+ 
+    const form = formidable({
+      multiples: true,
+      uploadDir: __dirname + "/../public/img/products",
+      keepExtensions: true,
+    });
+  
+    form.parse(req, async (err, fields, files) => {
+      const { name, description, price, stock, details, highlight, category } = fields;
+      const product = await Product.findByPk(req.params.id);
+      product.update({
+        name,
+        description,
+        price,
+        stock,
+        productDetail: details, 
+        // highlight,
+        // categoryId: category,
+        // image: [image1, image2]
+      
+        
+        
+      });
+      await product.save();
+  
+       res.json({ message:"se edito el producto", product});
+    });
+  }
+    
+  
+  
+
 
 // Remove the specified resource from storage.
 async function destroy(req, res) {
