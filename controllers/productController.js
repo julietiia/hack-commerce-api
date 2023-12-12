@@ -90,8 +90,8 @@ async function update(req, res) {
         price,
         stock,
         productDetail: details, 
-        // highlight,
-        // categoryId: category,
+        highlight,
+        categoryId: category,
         // image: [image1, image2]
       
         
