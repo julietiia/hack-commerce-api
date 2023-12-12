@@ -31,23 +31,35 @@ async function store(req, res) {
   });
 
   form.parse(req, async (err, fields, files) => {
-    const ext = path.extname(files.img.filespath);
-    const newFileName = `image_${Date.now()}${ext}`;
+    // console.log({fields, files})
+    const ext = path.extname(files.image1.filepath);
+    const newFilename = `image_${Date.now()}${ext}`;
     const { data, error } = await supabase.storage
       .from("img")
-      .upload(newFileName, fs.createReadStream(files.img.filepath), {
+      .upload(newFilename, fs.createReadStream(files.image1.filepath), {
         cacheControl: "3600",
         upsert: false,
-        contentType: files.img.mimetype,
+        contentType: files.image1.mimetype,
         duplex: "half",
       });
 
+      // const ext2 = path.extname(files.image2.filepath);
+      // const newFilename2 = `image2_${Date.now()}${ext2}`;
+      // const { data: data2, error: error2 } = await supabase.storage
+      //   .from("img")
+      //   .upload(newFilename2, fs.createReadStream(files.image2.filepath), {
+      //     cacheControl: "3600",
+      //     upsert: false,
+      //     contentType: files.image2.mimetype,
+      //     duplex: "half",
+      //   });
+
     const { name, description, price, stock, details, highlight, category } = fields;
 
-    const image1 =
-      files.image1 && files.image1.size > 0 ? files.image1.newFilename : newProduct.image1;
-    const image2 =
-      files.image2 && files.image2.size > 0 ? files.image2.newFilename : newProduct.image2;
+    // const image1 =
+    //   files.image1 && files.image1.size > 0 ? files.image1.newFilename : newProduct.image1;
+    // const image2 =
+    //   files.image2 && files.image2.size > 0 ? files.image2.newFilename : newProduct.image2;
 
     const newProduct = await Product.create({
       name,
@@ -57,9 +69,9 @@ async function store(req, res) {
       productDetail: details,
       highlight,
       categoryId: category,
-      image: [image1, image2],
+      image: [newFilename],
     });
-
+    
     res.end("Funcionó");
   });
 }
