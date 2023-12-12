@@ -68,7 +68,7 @@ async function update(req, res) {
     category.update({
       name: fields.name,
       description: fields.description,
-      // image: files.image.size === 0 ? category.image : files.image.newFilename,
+      image: files.image.size === 0 ? category.image : files.image.newFilename,
       // imageIcon: files.imageIcon.size === 0 ? category.imageIcon : files.imageIcon.newFilename,
       
       
