@@ -1,6 +1,10 @@
 const { Product, Category } = require("../models");
 const { Op } = require("sequelize");
 const formidable = require("formidable");
+const fs = require("fs");
+const path = require("path");
+const { createClient } = require("@supabase/supabase-js");
+const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY);
 
 // CRUD
 const index = async (req, res) => {
@@ -12,7 +16,6 @@ const index = async (req, res) => {
 async function show(req, res) {
   console.log(req.params.id);
   const product = await Product.findByPk(req.params.id);
-
   res.json({ product });
 }
 
@@ -24,11 +27,21 @@ async function create(req, res) {}
 async function store(req, res) {
   const form = formidable({
     multiples: true,
-    uploadDir: __dirname + "/../public/img/products",
     keepExtensions: true,
   });
 
   form.parse(req, async (err, fields, files) => {
+    const ext = path.extname(files.img.filespath);
+    const newFileName = `image_${Date.now()}${ext}`;
+    const { data, error } = await supabase.storage
+      .from("img")
+      .upload(newFileName, fs.createReadStream(files.img.filepath), {
+        cacheControl: "3600",
+        upsert: false,
+        contentType: files.img.mimetype,
+        duplex: "half",
+      });
+
     const { name, description, price, stock, details, highlight, category } = fields;
 
     const image1 =
@@ -47,7 +60,7 @@ async function store(req, res) {
       image: [image1, image2],
     });
 
-    res.json("Funcionó");
+    res.end("Funcionó");
   });
 }
 
