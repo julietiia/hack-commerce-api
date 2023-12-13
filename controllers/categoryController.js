@@ -1,5 +1,9 @@
-const {Category, Product} = require ("../models");
+const { Category, Product } = require("../models");
 const formidable = require("formidable");
+const fs = require("fs");
+const path = require("path");
+const { createClient } = require("@supabase/supabase-js");
+const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY);
 
 // Display a listing of the resource.
 async function index(req, res) {
@@ -15,45 +19,67 @@ async function create(req, res) {}
 
 // Store a newly created resource in storage.
 async function store(req, res) {
-    const form = formidable({
-        multiples: true,
-        uploadDir: __dirname + "/../public/img/products",
-        keepExtensions: true,
+  const form = formidable({
+    multiples: true,
+    keepExtensions: true,
+  });
+  form.parse(req, async (err, fields, files) => {
+    console.log( files.categoryImageIcon);
+    const ext = path.extname(files.categoryImage.filepath);
+    const newFilename = `image_${Date.now()}${ext}`;
+    const { data, error } = await supabase.storage
+      .from("img")
+      .upload(newFilename, fs.createReadStream(files.categoryImage.filepath), {
+        cacheControl: "3600",
+        upsert: false,
+        contentType: files.categoryImage.mimetype,
+        duplex: "half",
       });
-      form.parse(req, async (err, fields, files) => {
-        const { name, description } = fields;
-       
+      const ext2 = path.extname(files.categoryImageIcon.filepath);
+    const newFilename2 = `image_${Date.now()}${ext}`;
+    const { data: data2, error: error2 } = await supabase.storage
+      .from("img")
+      .upload(newFilename2, fs.createReadStream(files.categoryImageIcon.filepath), {
+        cacheControl: "3600",
+        upsert: false,
+        contentType: files.categoryImageIcon.mimetype,
+        duplex: "half",
+      });
+
+    const { name, description } = fields;
+     const image = files.categoryImage.size === 0 ? newCategory.categoryImage : files.categoryImage.newFilename
+    const imageIcon = files.categoryImageIcon.size === 0 ? newCategory.categoryImageIcon : files.categoryImageIcon.newFilename2
 
     const newCategory = await Category.create({
       name,
       description,
-      image: files.categoryImage.size === 0 ? newCategory.categoryImage : files.categoryImage.newFilename,
-      imageIcon: files.categoryImage.size === 0 ? newCategory.categoryImageIcon : files.categoryImageIcon.newFilename,
+      image: newFilename,
+      imageIcon: newFilename2
+      //
+
+     
+  
     });
-    
-    return res.json( "se creo una nueva categoria" );
+
+     res.end("se creo una nueva categoria");
   });
 }
-    //     await Category.create({
-    //       name: fields.name,
-    //       description: fields.description,
-    //       image: files.image.newFilename
-    //     });
-    
-    //     return res.redirect("/admin-category");
-    //   });
-    // }
-    
+//     await Category.create({
+//       name: fields.name,
+//       description: fields.description,
+//       image: files.image.newFilename
+//     });
 
+//     return res.redirect("/admin-category");
+//   });
+// }
 
 // Show the form for editing the specified resource.
 async function edit(req, res) {
-  const category = await Category.findByPk(req.params.id, 
-  );
-  
-  res.json( { category });
-}
+  const category = await Category.findByPk(req.params.id);
 
+  res.json({ category });
+}
 
 // Update the specified resource in storage.
 async function update(req, res) {
@@ -70,23 +96,20 @@ async function update(req, res) {
       description: fields.description,
       image: files.image.size === 0 ? category.image : files.image.newFilename,
       // imageIcon: files.imageIcon.size === 0 ? category.imageIcon : files.imageIcon.newFilename,
-      
-      
     });
     await category.save();
 
-     res.json({ message:"se edito la categoria", category});
+    res.json({ message: "se edito la categoria", category });
   });
 }
 
-
 // Remove the specified resource from storage.
 async function destroy(req, res) {
-  console.log(req.params)
+  console.log(req.params);
   // const category = await Category.findByPk(req.params.id);
-  const id = req.params.id
+  const id = req.params.id;
   await Category.destroy({ where: { id: req.params.id } });
-  console.log("Categoría eliminada:", req.params.id)
+  console.log("Categoría eliminada:", req.params.id);
   res.json({ message: "Category deleted successfully." });
 }
 

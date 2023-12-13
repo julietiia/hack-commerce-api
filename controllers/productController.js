@@ -30,6 +30,7 @@ async function store(req, res) {
   });
 
   form.parse(req, async (err, fields, files) => {
+    console.log({fields, files})
     const ext1 = path.extname(files.images[0].filepath);
     const newFilename1 = `image1_${Date.now()}${ext1}`;
     const { data, error } = await supabase.storage
