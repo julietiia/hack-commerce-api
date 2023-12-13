@@ -7,7 +7,9 @@ async function index(req, res) {
 }
 
 // Display the specified resource.
-async function show(req, res) {}
+async function show(req, res) {
+  
+}
 
 // Show the form for creating a new resource
 async function create(req, res) {}
