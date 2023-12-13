@@ -1,6 +1,7 @@
-const User = require("../models/User");
+const {User, Admin} = require("../models");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+
 
 async function getToken(req, res) {
   const user = await User.findOne({ where: { email: req.body.email } });
@@ -21,6 +22,26 @@ async function getToken(req, res) {
 });
 }
 
+async function getTokenAdmin(req, res) {
+  const admin = await Admin.findOne({ where: { email: req.body.email } });
+  console.log(req.body.email)
+
+  if (!admin) return res.json({ msg: "Wrong Credentials" });
+
+  const verifyPassword = await bcrypt.compare(req.body.password, admin.password);
+  if (!verifyPassword) return res.json({ msg: "Wrong Credentials" });
+
+  const token = jwt.sign({ sub: admin.id }, process.env.JWT_SECRET);
+
+  return res.json({
+    token, 
+    firstname: admin.firstname,
+    lastname: admin.lastname,
+    email: admin.email,
+    
+});
+}
+
 module.exports = {
-  getToken,
+  getToken, getTokenAdmin
 };
