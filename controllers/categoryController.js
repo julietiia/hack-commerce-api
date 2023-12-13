@@ -24,7 +24,7 @@ async function store(req, res) {
     keepExtensions: true,
   });
   form.parse(req, async (err, fields, files) => {
-    console.log( files.categoryImageIcon);
+   
     const ext = path.extname(files.categoryImage.filepath);
     const newFilename = `image_${Date.now()}${ext}`;
     const { data, error } = await supabase.storage
@@ -85,21 +85,47 @@ async function edit(req, res) {
 async function update(req, res) {
   const form = formidable({
     multiples: true,
-    uploadDir: __dirname + "/../public/img/products",
     keepExtensions: true,
   });
-
   form.parse(req, async (err, fields, files) => {
-    const category = await Category.findByPk(req.params.id);
-    category.update({
-      name: fields.name,
-      description: fields.description,
-      image: files.image.size === 0 ? category.image : files.image.newFilename,
-      // imageIcon: files.imageIcon.size === 0 ? category.imageIcon : files.imageIcon.newFilename,
-    });
-    await category.save();
+    console.log(files);
+    const ext = path.extname(files.categoryImage.filepath);
+    const newFilename = `image_${Date.now()}${ext}`;
+    const { data, error } = await supabase.storage
+      .from("img")
+      .upload(newFilename, fs.createReadStream(files.categoryImage.filepath), {
+        cacheControl: "3600",
+        upsert: false,
+        contentType: files.categoryImage.mimetype,
+        duplex: "half",
+      });
+      const ext2 = path.extname(files.categoryImageIcon.filepath);
+    const newFilename2 = `image_${Date.now()}${ext}`;
+    const { data: data2, error: error2 } = await supabase.storage
+      .from("img")
+      .upload(newFilename2, fs.createReadStream(files.categoryImageIcon.filepath), {
+        cacheControl: "3600",
+        upsert: false,
+        contentType: files.categoryImageIcon.mimetype,
+        duplex: "half",
+      });
 
-    res.json({ message: "se edito la categoria", category });
+    const { name, description } = fields;
+     const image = files.categoryImage.size === 0 ? updateCategory.categoryImage : files.categoryImage.newFilename
+    const imageIcon = files.categoryImageIcon.size === 0 ? updateCategory.categoryImageIcon : files.categoryImageIcon.newFilename2
+
+    const updateCategory = await Category.update({
+      name,
+      description,
+      image: newFilename,
+      imageIcon: newFilename2
+      //
+
+     
+  
+    });
+
+     res.end("se edito la categoria");
   });
 }
 
