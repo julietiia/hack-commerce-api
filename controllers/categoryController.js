@@ -88,8 +88,6 @@ async function update(req, res) {
     keepExtensions: true,
   });
   form.parse(req, async (err, fields, files) => {
-    console.log({ files, fields });
-    // console.log(files.categoryImage);
     const ext = path.extname(files.categoryImage.filepath);
     const newFilename = `image_${Date.now()}${ext}`;
     const { data, error } = await supabase.storage
@@ -141,7 +139,6 @@ async function update(req, res) {
 
 // Remove the specified resource from storage.
 async function destroy(req, res) {
-  console.log(req.params);
   // const category = await Category.findByPk(req.params.id);
   const id = req.params.id;
   await Category.destroy({ where: { id: req.params.id } });
