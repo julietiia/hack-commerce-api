@@ -11,5 +11,6 @@ const authController = require("../controllers/authController")
  */
 
 router.post("/", authController.getToken);
+router.post("/admin", authController.getTokenAdmin);
 
 module.exports = router;
