@@ -24,7 +24,6 @@ async function store(req, res) {
     keepExtensions: true,
   });
   form.parse(req, async (err, fields, files) => {
-   
     const ext = path.extname(files.categoryImage.filepath);
     const newFilename = `image_${Date.now()}${ext}`;
     const { data, error } = await supabase.storage
@@ -35,7 +34,7 @@ async function store(req, res) {
         contentType: files.categoryImage.mimetype,
         duplex: "half",
       });
-      const ext2 = path.extname(files.categoryImageIcon.filepath);
+    const ext2 = path.extname(files.categoryImageIcon.filepath);
     const newFilename2 = `image_${Date.now()}${ext}`;
     const { data: data2, error: error2 } = await supabase.storage
       .from("img")
@@ -47,21 +46,22 @@ async function store(req, res) {
       });
 
     const { name, description } = fields;
-     const image = files.categoryImage.size === 0 ? newCategory.categoryImage : files.categoryImage.newFilename
-    const imageIcon = files.categoryImageIcon.size === 0 ? newCategory.categoryImageIcon : files.categoryImageIcon.newFilename2
+    const image =
+      files.categoryImage.size === 0 ? newCategory.categoryImage : files.categoryImage.newFilename;
+    const imageIcon =
+      files.categoryImageIcon.size === 0
+        ? newCategory.categoryImageIcon
+        : files.categoryImageIcon.newFilename2;
 
     const newCategory = await Category.create({
       name,
       description,
       image: newFilename,
-      imageIcon: newFilename2
+      imageIcon: newFilename2,
       //
-
-     
-  
     });
 
-     res.end("se creo una nueva categoria");
+    res.end("se creo una nueva categoria");
   });
 }
 //     await Category.create({
@@ -88,7 +88,8 @@ async function update(req, res) {
     keepExtensions: true,
   });
   form.parse(req, async (err, fields, files) => {
-    console.log(files);
+    console.log({ files, fields });
+    // console.log(files.categoryImage);
     const ext = path.extname(files.categoryImage.filepath);
     const newFilename = `image_${Date.now()}${ext}`;
     const { data, error } = await supabase.storage
@@ -99,8 +100,8 @@ async function update(req, res) {
         contentType: files.categoryImage.mimetype,
         duplex: "half",
       });
-      const ext2 = path.extname(files.categoryImageIcon.filepath);
-    const newFilename2 = `image_${Date.now()}${ext}`;
+    const ext2 = path.extname(files.categoryImageIcon.filepath);
+    const newFilename2 = `image_${Date.now()}${ext2}`;
     const { data: data2, error: error2 } = await supabase.storage
       .from("img")
       .upload(newFilename2, fs.createReadStream(files.categoryImageIcon.filepath), {
@@ -111,21 +112,30 @@ async function update(req, res) {
       });
 
     const { name, description } = fields;
-     const image = files.categoryImage.size === 0 ? updateCategory.categoryImage : files.categoryImage.newFilename
-    const imageIcon = files.categoryImageIcon.size === 0 ? updateCategory.categoryImageIcon : files.categoryImageIcon.newFilename2
+    const image =
+      files.categoryImage.size === 0
+        ? updateCategory.categoryImage
+        : files.categoryImage.newFilename;
+    const imageIcon =
+      files.categoryImageIcon.size === 0
+        ? updateCategory.categoryImageIcon
+        : files.categoryImageIcon.newFilename2;
 
-    const updateCategory = await Category.update({
-      name,
-      description,
-      image: newFilename,
-      imageIcon: newFilename2
-      //
+    const updateCategory = await Category.update(
+      {
+        name,
+        description,
+        image: newFilename,
+        imageIcon: newFilename2,
+      },
+      {
+        where: {
+          id: req.params.id,
+        },
+      },
+    );
 
-     
-  
-    });
-
-     res.end("se edito la categoria");
+    res.end("se edito la categoria");
   });
 }
 

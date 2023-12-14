@@ -6,6 +6,24 @@ const path = require("path");
 const { createClient } = require("@supabase/supabase-js");
 const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY);
 
+// SEARCH LOGIC
+// function escapeRegex(text) {
+//   return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&'); 
+// }
+
+// const indexBy = async(req, res) => {
+//   const {query} = req.query;
+
+//   const results = await Product.findAll({
+//     where: {
+//       name: {
+//         [Op.iRegexp]: `.*${escapeRegex(query)}.*`,
+//       },
+//     },
+//   })
+//   res.json({results})
+// }
+
 // CRUD
 const index = async (req, res) => {
   const result = await Product.findAll();
@@ -129,6 +147,7 @@ async function getByCategory(req, res) {
 }
 
 module.exports = {
+ 
   index,
   show,
   create,
