@@ -8,7 +8,8 @@ async function index(req, res) {
 
 // Display the specified resource.
 async function show(req, res) {
-  
+  const orders = await Order.findAll({ where: { userId: req.params.id } })
+  res.json({orders})
 }
 
 // Show the form for creating a new resource
@@ -30,11 +31,11 @@ async function edit(req, res) {}
 
 // Update the specified resource in storage.
 async function update(req, res) {
-  // const orderToUpdate = await Order.findByPk(req.params.id);
-  // orderToUpdate.update({
-  //   state: req.body.state,
-  // });
-  // await orderToUpdate.save({ fields: ['id', 'state'] });
+  const orderToUpdate = await Order.findByPk(req.params.id);
+  orderToUpdate.update({
+    state: req.body.state,
+  });
+  await orderToUpdate.save({ fields: ['id', 'state'] });
 }
 
 // Remove the specified resource from storage.
