@@ -5,7 +5,6 @@ const jwt = require("jsonwebtoken");
 
 async function getToken(req, res) {
   const user = await User.findOne({ where: { email: req.body.email } });
-  console.log(user)
   if (!user) return res.json({ msg: "Wrong Credentials" });
 
   const verifyPassword = await bcrypt.compare(req.body.password, user.password);
@@ -25,7 +24,6 @@ async function getToken(req, res) {
 
 async function getTokenAdmin(req, res) {
   const admin = await Admin.findOne({ where: { email: req.body.email } });
-  console.log(req.body.email)
 
   if (!admin) return res.json({ msg: "Wrong Credentials" });
 
