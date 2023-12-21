@@ -5,6 +5,7 @@ const authRoutes = require("./authRoutes");
 const orderRoutes = require ("./orderRoutes")
 const categoryRoutes = require("./categoryRoutes")
 
+
 module.exports = (app) => {
   app.use("/tokens", authRoutes);
   app.use("/categories", categoryRoutes);
