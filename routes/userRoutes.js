@@ -6,7 +6,7 @@ const userController = require("../controllers/userController");
 // ...
 
 router.post("/", userController.store);
-
+router.post("/wishlist/:id", userController.create)
 // router.get("/crear", userController.create);
 // router.get("/:id", userController.show);
 // router.get("/:id/editar", userController.edit);

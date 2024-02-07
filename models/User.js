@@ -27,6 +27,9 @@ class User extends Model {
         password: {
           type: DataTypes.STRING,
         },
+        wishlist: {
+          type: DataTypes.JSON,
+        },
       },
       {
         sequelize,
