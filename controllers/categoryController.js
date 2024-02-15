@@ -1,9 +1,15 @@
 const { Category, Product } = require("../models");
+require("dotenv").config();
 const formidable = require("formidable");
 const fs = require("fs");
 const path = require("path");
 const { createClient } = require("@supabase/supabase-js");
 const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY);
+// const supabase = createClient({supabaseUrl: process.env.SUPABASE_URL, supabaseKey: process.env.SUPABASE_KEY, options: {
+//   headers: {
+//     'Access-Control-Allow-Origin': 'https://apparatdesign.vercel.app',
+//   }
+// }})
 
 // Display a listing of the resource.
 async function index(req, res) {

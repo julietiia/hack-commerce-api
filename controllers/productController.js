@@ -1,4 +1,5 @@
 const { Product, Category } = require("../models");
+require("dotenv").config();
 const { Op } = require("sequelize");
 const formidable = require("formidable");
 const fs = require("fs");
@@ -8,7 +9,7 @@ const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY
 
 // SEARCH LOGIC
 // function escapeRegex(text) {
-//   return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&'); 
+//   return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
 // }
 
 // const indexBy = async(req, res) => {
@@ -145,7 +146,6 @@ async function getByCategory(req, res) {
 }
 
 module.exports = {
- 
   index,
   show,
   create,
