@@ -9,7 +9,7 @@ const app = express();
 const session = require("express-session");
 
 
-app.use(cors({ origin: 'https://apparatdesign.vercel.app' }));
+app.use(cors());
 app.use(methodOverride("_method"));
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
